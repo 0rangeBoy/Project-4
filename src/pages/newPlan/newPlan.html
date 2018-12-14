@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      New Plan
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Plan Title:</ion-label>
+    <ion-input [(ngModel)]="title" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Plan Description:</ion-label>
+    <ion-input [(ngModel)]="desc"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Plan Location:</ion-label>
+    <ion-input [(ngModel)]="locy"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Location Weather:</ion-label>
+    <ion-input disabled="true"  [(ngModel)]="wety" placeholder = "Use Map"> </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Time:</ion-label>
+    <ion-datetime [(ngModel)]="time" displayFormat="h:mm a" ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Date:</ion-label>
+    <ion-datetime [(ngModel)]="date" displayFormat="M/D/YYYY" [min]="minDate" ></ion-datetime>
+  </ion-item>
+
+  <button class = 'center' ion-button (click)="getPlan()">Confirm</button>
+  <button class = 'center' ion-button (click)="clearPlan()">Clear Planner</button>
+
+</ion-content>
